@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        timberwolf: "#d8d7cc",
+        ebony: "#212939",
+      },
+    },
   },
   plugins: [],
 };
