@@ -1,5 +1,5 @@
 const baseH3Title = "text-xl font-bold text-white";
-import Icon from "../../CustomIcon/Icon";
+import Icon from "../../common/CustomIcon/Icon";
 
 export interface Stack {
   stackName: string;

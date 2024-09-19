@@ -1,4 +1,4 @@
-import { iconProps } from '../../CustomIcon/Icon';
+import { iconProps } from '../../common/CustomIcon/Icon';
 
 // Interface
 interface StackIcons extends Omit<iconProps, 'alt'> {
