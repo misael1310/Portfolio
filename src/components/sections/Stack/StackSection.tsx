@@ -1,5 +1,5 @@
 import StackIcons from "./StackIcons";
-import { stackData } from "./stackData";
+import { stackData } from "../../../data/stackData";
 
 export default function StackSection() {
   return (
