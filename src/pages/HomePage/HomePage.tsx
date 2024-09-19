@@ -1,5 +1,5 @@
-import HomePageBanner from "../../components/sections/Banner/HomePageBanner";
-import StackSection from "../../components/sections/Stack/StackSection";
+import HomePageBanner from "../../components/sections/Banner";
+import StackSection from "../../components/sections/Stack";
 
 export default function HomePage() {
   return (
