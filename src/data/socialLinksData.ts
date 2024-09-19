@@ -1,4 +1,4 @@
-import { SocialMediaType } from '../../common/SocialMedia/SocialMedia';
+import { SocialMediaType } from '../components/common/SocialMedia/SocialMedia';
 
 export const socialLinks: SocialMediaType[] = [
   {
