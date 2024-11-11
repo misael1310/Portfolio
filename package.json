@@ -28,6 +28,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@eslint/js": "^9.9.0",
     "@types/classnames": "^2.3.1",
     "@types/react": "^18.3.3",
