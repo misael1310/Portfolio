@@ -18,7 +18,7 @@ const projectCard: ProjectCardProps = {
 export default function Projects() {
   const { title, description, picture } = projectCard;
   return (
-    <div className="flex flex-col flex-wrap justify-center my-5">
+    <div className="flex flex-col flex-wrap justify-center -mt-20 pb-10">
       <div className="flex flex-wrap justify-center my-10">
         <h2 className="text-4xl lg:text-5xl text-ebony font-bold">Projects</h2>
       </div>
