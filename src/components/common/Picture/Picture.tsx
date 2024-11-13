@@ -1,4 +1,4 @@
-interface pictureProps {
+export interface pictureProps {
   srcset: string;
   imgSrc: string;
   imgClass: string;
@@ -19,7 +19,7 @@ export default function Picture({
   //TODO: Please improve the checkType capability in future revisions.
   const checkType = (
     src: pictureProps["srcset"],
-    type: string = "webp"
+    type: string = "webp",
   ): boolean => {
     const pattern = new RegExp(`.${type}(?:[?].*)?$`, "i");
     return pattern.test(src);
