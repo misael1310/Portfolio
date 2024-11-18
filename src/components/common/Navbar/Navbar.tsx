@@ -10,8 +10,8 @@ export default function Navbar() {
   const linkClass =
     "block py-2 px-3 text-ebony rounded md:bg-transparent md:p-0";
   return (
-    <nav className="bg-timberwolf">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="max-w-screen-xl m-auto bg-timberwolf">
+      <div className="flex flex-wrap items-center justify-end md:h-20 pt-8 md:pt-0 px-6">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
         </a>
