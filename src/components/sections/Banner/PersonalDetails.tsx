@@ -9,7 +9,7 @@ export function PersonalDetails() {
     <>
       <div className={`${sectionWrapperClasses} title px-6 lg:px-0`}>
         <h1 className="text-4xl lg:text-5xl text-ebony font-bold text-center sm:text-justify">
-          Junior Front End Developer
+          Junior Full stack Developer
         </h1>
       </div>
 
