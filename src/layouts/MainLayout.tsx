@@ -1,3 +1,4 @@
+import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
 
 interface MainLayoutProps {
@@ -8,8 +9,8 @@ function MainLayout(props: MainLayoutProps) {
   return (
     <>
       <Header />
-
       <main>{props.children}</main>
+      <Footer />
     </>
   );
 }
