@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { useState } from "react";
+import { NavLink, Link } from "react-router";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,9 +13,6 @@ export default function Navbar() {
   return (
     <nav className="max-w-screen-xl m-auto bg-timberwolf">
       <div className="flex flex-wrap items-center justify-end md:h-20 pt-8 md:pt-0 px-6">
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
-        </a>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
@@ -48,22 +46,22 @@ export default function Navbar() {
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 items-center">
             <li>
-              <a href="/" className={linkClass} aria-current="page">
+              <NavLink to="/" className={linkClass} aria-current="page">
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/" className={linkClass}>
+              <Link to="#projects" className={linkClass}>
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/"
+              <Link
+                to="#aboutMe"
                 className="block px-6 py-1 text-ebony rounded-3xl md:bg-transparent border-ebony dark:border "
               >
                 About me
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
