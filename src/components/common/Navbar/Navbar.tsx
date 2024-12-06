@@ -1,15 +1,20 @@
 import classNames from "classnames";
 import { useState } from "react";
-import { NavLink, Link } from "react-router";
+import { NavLink, Link, useLocation } from "react-router";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMobileMenu = (): void => {
+
+  const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const linkClass =
     "block py-2 px-3 text-ebony rounded md:bg-transparent md:p-0";
+
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   return (
     <nav className="max-w-screen-xl m-auto bg-timberwolf">
       <div className="flex flex-wrap items-center justify-end md:h-20 pt-8 md:pt-0 px-6">
@@ -50,19 +55,23 @@ export default function Navbar() {
                 Home
               </NavLink>
             </li>
-            <li>
-              <Link to="#projects" className={linkClass}>
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="#aboutMe"
-                className="block px-6 py-1 text-ebony rounded-3xl md:bg-transparent border-ebony dark:border "
-              >
-                About me
-              </Link>
-            </li>
+            {currentPath === "/" && (
+              <>
+                <li>
+                  <Link to="#projects" className={linkClass}>
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="#aboutMe"
+                    className="block px-6 py-1 text-ebony rounded-3xl md:bg-transparent border-ebony dark:border "
+                  >
+                    About me
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>
