@@ -25,11 +25,11 @@ export default function PostPage() {
 
     if (data) {
       return (
-        <>
+        <div className="pt-20">
           <PostBanner {...data} />
           <PostTitle title={data.post_title} />
           <PostContent />
-        </>
+        </div>
       );
     }
     return null;
