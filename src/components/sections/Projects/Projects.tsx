@@ -18,7 +18,7 @@ const projectCard: ProjectCardProps = {
 export default function Projects() {
   const { title, description, picture } = projectCard;
   return (
-    <section id="projects" className="max-w-screen-xl m-auto">
+    <section id="projects" className="max-w-screen-xl m-auto pt-20 -mt-20">
       <div className="flex flex-col flex-wrap justify-center -mt-20 md:-mt-10 pb-10">
         <div className="my-10 px-6">
           <h2 className="text-4xl text-center lg:text-start lg:text-5xl text-ebony font-bold">

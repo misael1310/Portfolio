@@ -1,21 +1,39 @@
 import PostBanner from "./Components/PostBanner";
 import PostContent from "./Components/PostContent";
 import PostTitle from "./Components/PostTitle";
+import NotFoundPage from "../NotFoundPage/NotFoundPage";
+import { useParams } from "react-router";
 import { useFetchPostByIDQuery } from "../../features/posts/postsApi-slice";
 
 export default function PostPage() {
-  const { data, error, isLoading } = useFetchPostByIDQuery("1");
+  const { id } = useParams();
+  const { data, error, isLoading } = useFetchPostByIDQuery(id as string);
 
-  if (isLoading) return "Loading...";
-  if (error) return "Something went wrong...";
+  const renderContent = () => {
+    if (isLoading) return "Loading...";
 
-  return (
-    data && (
-      <>
-        <PostBanner {...data} />
-        <PostTitle title={data.post_title} />
-        <PostContent />
-      </>
-    )
-  );
+    if (error) {
+      if ("status" in error && error.status === 404) {
+        return <NotFoundPage />;
+      }
+      const errorMessage = "Something went wrong...";
+      if ("data" in error && (error.data as { message?: string }).message) {
+        return `${errorMessage} ${(error.data as { message: string }).message}`;
+      }
+      return errorMessage;
+    }
+
+    if (data) {
+      return (
+        <>
+          <PostBanner {...data} />
+          <PostTitle title={data.post_title} />
+          <PostContent />
+        </>
+      );
+    }
+    return null;
+  };
+
+  return <>{renderContent()}</>;
 }
