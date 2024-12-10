@@ -1,12 +1,19 @@
 import classNames from "classnames";
-import { useState } from "react";
-import { NavLink, Link, useLocation } from "react-router";
+import { useState, MouseEvent } from "react";
+import { NavLink, Link, useLocation, useNavigate } from "react-router";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleHomeClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    void navigate("/", { replace: true });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const linkClass =
@@ -51,7 +58,12 @@ export default function Navbar() {
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 items-center">
             <li>
-              <NavLink to="/" className={linkClass} aria-current="page">
+              <NavLink
+                to="/"
+                className={linkClass}
+                onClick={handleHomeClick}
+                aria-current="page"
+              >
                 Home
               </NavLink>
             </li>
