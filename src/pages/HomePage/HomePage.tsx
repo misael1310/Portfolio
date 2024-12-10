@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <ScrollToHash />
-      <div className="container mx-auto mt-5">
+      <div className="container mx-auto mt-20 pt-5">
         <HomePageBanner />
         <Projects />
         <AboutMe />

@@ -16,7 +16,7 @@ export default function Navbar() {
   const currentPath = location.pathname;
 
   return (
-    <nav className="max-w-screen-xl m-auto bg-timberwolf">
+    <nav className="fixed top-0 w-full bg-zinc-50 z-50">
       <div className="flex flex-wrap items-center justify-end md:h-20 pt-8 md:pt-0 px-6">
         <button
           data-collapse-toggle="navbar-default"
