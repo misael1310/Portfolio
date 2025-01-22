@@ -3,8 +3,8 @@ export interface pictureProps {
   imgSrc: string;
   imgClass: string;
   imgAlt: string;
-  imgWidth: number;
-  imgHeight: number;
+  imgWidth?: number;
+  imgHeight?: number;
 }
 
 export default function Picture({
