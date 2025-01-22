@@ -8,8 +8,8 @@ export type projectPicture = Omit<
 
 export interface ProjectCardProps {
   title: string;
-  description: string;
   picture: projectPicture;
+  description?: string;
 }
 
 function ProjectCard({
@@ -18,18 +18,16 @@ function ProjectCard({
   picture: { srcset, imgSrc, imgAlt },
 }: ProjectCardProps) {
   return (
-    <div id="wrapper" className="flex flex-row">
+    <div id={`wrapper-${title}`} className="flex flex-row flex-wrap">
       <div
         id="Container"
-        className="relative max-w-80 rounded-lg overflow-hidden group"
+        className="relative max-w-80 aspect-square rounded-lg overflow-hidden group"
       >
         <Picture
           srcset={srcset}
           imgSrc={imgSrc}
-          imgClass="w-full h-full object-cover"
+          imgClass="w-full h-full object-cover aspect-square"
           imgAlt={imgAlt}
-          imgWidth={320}
-          imgHeight={320}
         />
         <div
           id="overlay"

@@ -37,7 +37,7 @@ export default function PostPage() {
         <div className="pt-20">
           <PostBanner {...data} />
           <PostTitle title={data.post_title} />
-          <PostContent />
+          <PostContent content={data.post_content} />
         </div>
       );
     }

@@ -1,7 +1,12 @@
 import Picture from "../../common/Picture";
 import { aboutMeContent } from "../../../data/aboutMeData";
+import { Images } from "../../../utils/assets";
 
 export default function AboutMe() {
+  const {
+    ABOUT_ME: { WEBP, JPG, ALT },
+  } = Images;
+
   return (
     <section id="aboutMe" className="max-w-screen-xl m-auto lg:pt-10">
       <div
@@ -29,10 +34,10 @@ export default function AboutMe() {
           className="flex justify-around w-full lg:w-1/2"
         >
           <Picture
-            srcset="https://i.ibb.co/zZZvHbM/about-ME.webp"
-            imgSrc="https://fastly.picsum.photos/id/965/400/400.jpg?hmac=KAYbpNyKTmK5tp3_iz11PxtITzVZlHlJ8v3k90vG_hI"
+            srcset={WEBP}
+            imgSrc={JPG}
             imgClass="rounded-lg"
-            imgAlt=""
+            imgAlt={ALT}
             imgWidth={400}
             imgHeight={400}
           />
