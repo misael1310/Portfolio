@@ -1,6 +1,14 @@
 const Images = {
-  PROFILE_PICTURE_WEBP: 'https://i.ibb.co/r7K5cKB/Profile.webp',
-  PROFILE_PICTURE_JPG: 'https://i.ibb.co/JywVGH8/Profile.jpg',
+  PROFILE: {
+    WEBP: 'https://i.ibb.co/4dkGxm4/Mp-Avatar-1.webp',
+    JPG: 'https://i.ibb.co/n7MxtCV/Mp-Avatar-1.png',
+    ALT: 'Misael Perez (MP Dev) Avatar',
+  },
+  ABOUT_ME: {
+    WEBP: 'https://i.ibb.co/sPpdf3L/Misael-Perez-real-picture.webp',
+    JPG: 'https://i.ibb.co/BNgJ0VV/Misael-Perez-real-picture.jpg',
+    ALT: 'Misael Perez sitting on a wooden log, wearing a light purple sweater and khaki pants, surrounded by vibrant green and pink flowering plants, smiling warmly.',
+  },
 };
 
 const Icons = {
