@@ -4,6 +4,7 @@ import { useFetchPostsQuery } from "../../../features/posts/postsApi-slice";
 import { ProjectCard, projectPicture } from "./ProjectCard";
 import { PostPageData } from "../../../pages/PostPage/postTypes";
 import ProjectsLoading from "./Components/ProjectsLoading";
+import ComingSoon from "./Components/ComingSoon";
 
 export default function Projects() {
   const { data, isLoading } = useFetchPostsQuery();
@@ -27,10 +28,13 @@ export default function Projects() {
   });
 
   if (!isAnimationComplete || isLoading) return <ProjectsLoading />;
+
+  if (!data) return <ComingSoon />;
+
   return (
     <section
       id="projects"
-      className="max-w-screen-xl m-auto pt-20 -mt-20 transition-all"
+      className="max-w-screen-xl m-auto pt-20 -mt-20 transition-all animate-pulse"
     >
       <div className="flex flex-col flex-wrap justify-center -mt-20 md:-mt-10 pb-10">
         <div className="my-10 px-6">
@@ -40,7 +44,7 @@ export default function Projects() {
         </div>
         <div className="flex flex-wrap justify-center items-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 px-4">
-            {data?.map((Post) => {
+            {data.map((Post) => {
               const { idpost, post_title } = Post;
 
               return (
