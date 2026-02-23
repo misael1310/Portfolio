@@ -16,7 +16,7 @@ export default function ComingSoon() {
                   id="Container"
                   className="relative max-w-80 aspect-square rounded-lg overflow-hidden group"
                 >
-                  <div className="w-80 lg:w-60 xl:w-80 aspect-square shadow-lg flex flex-col flex-wrap items-center justify-center bg-gradient-to-r from-slate-200 to-slate-300">
+                  <div className="w-80 lg:w-60 xl:w-80 aspect-square shadow-lg flex flex-col flex-wrap items-center justify-center bg-linear-to-r from-slate-200 to-slate-300">
                     <p className="text-4xl text-center lg:text-start lg:text-5xl text-ebony font-bold">
                       {char}
                     </p>
