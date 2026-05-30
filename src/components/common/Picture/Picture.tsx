@@ -7,6 +7,10 @@ export interface pictureProps {
   imgHeight?: number;
 }
 
+function ErrorMessage({ message }: { message: string }) {
+  return <p className="text-red-500">{message}</p>;
+}
+
 export default function Picture({
   srcset,
   imgSrc,
@@ -25,19 +29,18 @@ export default function Picture({
     return pattern.test(src);
   };
 
-  const ErrorMessage = ({ message }: { message: string }) => {
-    console.error(message);
-    return <p className="text-red-500">{message}</p>;
-  };
-
   const isWebp = checkType(srcset);
 
   if (!isWebp) {
-    return <ErrorMessage message="Please provide a valid webp image." />;
+    const message = "Please provide a valid webp image.";
+    console.error(message);
+    return <ErrorMessage message={message} />;
   }
 
   if (srcset === imgSrc) {
-    return <ErrorMessage message="You cannot use the WebP image twice." />;
+    const message = "You cannot use the WebP image twice.";
+    console.error(message);
+    return <ErrorMessage message={message} />;
   }
 
   return (

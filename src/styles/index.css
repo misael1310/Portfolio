@@ -1,6 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-ebony: #212939;
+}
+
+/* v4 has no grid-template-columns theme namespace for named values,
+   so the existing class names are preserved with @utility. */
+@utility grid-cols-stack {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 160px));
+}
+
+@utility grid-cols-stack-4 {
+  grid-template-columns: repeat(4, minmax(160px, 160px));
+}
 
 body {
   background-color: #fafafa;

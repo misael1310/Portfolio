@@ -31,7 +31,7 @@ function ProjectCard({
         />
         <div
           id="overlay"
-          className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-85 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          className="absolute inset-0 flex flex-col items-center justify-center bg-black/85 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         >
           <div className="flex flex-col gap-2 items-center justify-center px-3">
             <h3 className="text-white text-3xl font-bold">{title}</h3>

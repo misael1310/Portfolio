@@ -42,7 +42,7 @@ export default function ProjectLoadingCard({
         </div>
         <div
           id="overlay"
-          className={`absolute inset-0 flex flex-col flex-wrap items-center justify-center bg-black bg-opacity-85 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flip_card ${isActive ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 flex flex-col flex-wrap items-center justify-center bg-black/85 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flip_card ${isActive ? "opacity-100" : "opacity-0"}`}
         >
           <div className="flex flex-col flex-wrap gap-2 items-center justify-center px-3">
             <Picture
