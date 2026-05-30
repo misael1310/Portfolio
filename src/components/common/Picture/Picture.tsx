@@ -7,6 +7,11 @@ export interface pictureProps {
   imgHeight?: number;
 }
 
+function ErrorMessage({ message }: { message: string }) {
+  console.error(message);
+  return <p className="text-red-500">{message}</p>;
+}
+
 export default function Picture({
   srcset,
   imgSrc,
@@ -23,11 +28,6 @@ export default function Picture({
   ): boolean => {
     const pattern = new RegExp(`.${type}(?:[?].*)?$`, "i");
     return pattern.test(src);
-  };
-
-  const ErrorMessage = ({ message }: { message: string }) => {
-    console.error(message);
-    return <p className="text-red-500">{message}</p>;
   };
 
   const isWebp = checkType(srcset);
