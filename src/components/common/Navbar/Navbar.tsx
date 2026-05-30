@@ -17,7 +17,7 @@ export default function Navbar() {
   };
 
   const linkClass =
-    "block py-2 px-3 text-ebony rounded md:bg-transparent md:p-0";
+    "block py-2 px-3 text-ebony rounded-sm md:bg-transparent md:p-0";
 
   const location = useLocation();
   const currentPath = location.pathname;
@@ -56,7 +56,7 @@ export default function Navbar() {
           })}
           id="navbar-default"
         >
-          <ul className="font-medium text-lg flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 items-center">
+          <ul className="font-medium text-lg flex flex-col p-4 md:p-0 mt-4 border border-gray-200 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 items-center">
             <li>
               <NavLink
                 to="/"
