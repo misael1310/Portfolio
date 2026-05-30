@@ -235,3 +235,15 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,windows,linux,macos
+docs
+
+.ai/
+.claude/
+.cursor/
+.opencode/
+.codegraph/
+.agents/
+AGENTS.md
+CLAUDE.md
+opencode.json
+skills-lock.json
